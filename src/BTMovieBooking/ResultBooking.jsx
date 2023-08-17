@@ -9,25 +9,25 @@ const ResultBooking = () => {
     const dispatch = useDispatch()
     return (
         <div className='bg2 p-3'>
-            <h3 className='text-center'>Thông tin thanh toán</h3>
+            <h3 className='text-center text-white'>Thông tin thanh toán</h3>
             <div className="mt-4">
                 <div className="d-flex mt-2 gap-2 align-items-center">
-                    <div className="Chair Chair-border"></div>
+                    <div className="Chair Chair-border "></div>
                     <p>Ghế trống</p>
                 </div>
                 <div className="d-flex mt-2 gap-2 align-items-center">
-                    <div className="Chair booking Chair-border"></div>
+                    <div className="Chair booking Chair-border "></div>
                     <p>Ghế đang chọn</p>
                 </div>
                 <div className="d-flex mt-2 gap-2 align-items-center">
-                    <div className="Chair booked Chair-border"></div>
+                    <div className="Chair booked Chair-border "></div>
                     <p>Ghế đã đặt</p>
                 </div>
             </div>
             <table className="table mt-2">
                 <thead>
                     <tr>
-                        <th>Số ghế</th>
+                        <th>Ghế</th>
                         <th className='text-center'>Giá vé</th>
                         <th className='text-center'></th>
                     </tr>

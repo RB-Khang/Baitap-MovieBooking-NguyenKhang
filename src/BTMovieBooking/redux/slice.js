@@ -31,8 +31,11 @@ const BTMovieBookingSlice = createSlice({
         removeBooking: (state, action) => {
             let index = state.ChairBooking.findIndex(ghe => ghe.soGhe === action.payload.soGhe)
             state.ChairBooking.splice(index, 1)
-
+        },
+        removeChair: (state, action) => {
+            state.ChairBooking = []
         }
+
     }
 
 })

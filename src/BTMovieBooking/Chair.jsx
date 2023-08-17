@@ -12,7 +12,8 @@ const Chair = ({ Chair }) => {
             <span className={cn('Chair',
                 { 'booking': ChairBooking.find(ghe => ghe.soGhe === Chair.soGhe) },
                 { 'booked': ChairBooked.find(ghe => ghe.soGhe === Chair.soGhe) },
-                { 'Chair-border': Chair.gia !== 0 })} onClick={() => {
+                { 'Chair-border': Chair.gia !== 0 },
+                { 'text-white fw-bold': Chair.gia === 0 })} onClick={() => {
                     dispatch(BTMovieBookingActions.setChairBooking(Chair))
                 }}>{Chair.soGhe}</span>
         </div >

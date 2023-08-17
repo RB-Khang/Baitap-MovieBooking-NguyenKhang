@@ -7,7 +7,7 @@ const ChairList = ({ data }) => {
             {
                 data.map(ChairRow => {
                     return <div key={ChairRow.hang} className='d-flex gap-2 mt-3 Chair-row'>
-                        <p className='Chair non-border'>{ChairRow.hang}</p>
+                        <p className='Chair non-border text-white fw-bold'>{ChairRow.hang}</p>
                         {
                             ChairRow.danhSachGhe.map(item => {
                                 return <Chair key={item.soGhe} Chair={item}></Chair>

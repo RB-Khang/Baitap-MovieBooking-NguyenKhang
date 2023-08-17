@@ -28,8 +28,8 @@ const ResultBooking = () => {
                 <thead>
                     <tr>
                         <th>Số ghế</th>
-                        <th className='text-center'>Giá</th>
-                        <th className='text-center'>Huỷ</th>
+                        <th className='text-center'>Giá vé</th>
+                        <th className='text-center'></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,7 +43,7 @@ const ResultBooking = () => {
                         </tr>
                     })}
                     <tr>
-                        <td></td>
+                        <td className='fw-bold'>Tổng tiền</td>
                         <td className='text-center fw-bold'>{
                             ChairBooking.reduce((total, current) => {
                                 return total + current.gia
@@ -54,12 +54,17 @@ const ResultBooking = () => {
 
                 </tbody>
                 <tfoot>
-
                 </tfoot>
             </table>
-            <button className="btn btn-success mt-2" onClick={() => {
-                dispatch(BTMovieBookingActions.setChairBooked())
-            }}>Thanh toán</button>
+            <div className="d-flex justify-content-between">
+                <button className='btn btn-danger' onClick={()=>{
+                    dispatch(BTMovieBookingActions.removeChair())
+                }}>Huỷ chọn vé</button>
+                <button className="btn btn-success" onClick={() => {
+                    dispatch(BTMovieBookingActions.setChairBooked())
+                }}>Thanh toán</button>
+            </div>
+
         </div>
     )
 }

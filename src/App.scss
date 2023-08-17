@@ -80,7 +80,7 @@ p {
   text-align: center;
 }
 .Chair-border{
-  border: 1px solid #333;
+  border: 1px solid transparent;
   border-radius: 4px;
   background-color: rgb(255, 255, 255);
 
@@ -99,7 +99,7 @@ p {
   color: white;
 }
 .booked{
-  background-color: rgb(18, 100, 18);
+  background-color: #157347;
   color: white;
 }
 
